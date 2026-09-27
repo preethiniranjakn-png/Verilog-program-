@@ -1,43 +1,61 @@
-# 32-bit ALU (Arithmetic Logic Unit) – Verilog HDL
+# 32-bit ALU using Verilog HDL
 
-## Overview
+## Project Overview
 
-This project implements a **32-bit Arithmetic Logic Unit (ALU)** using **Verilog HDL**. The ALU performs various arithmetic and logical operations based on the selected control input. The design was simulated and verified using a Verilog simulator.
+This project implements a 32-bit Arithmetic Logic Unit (ALU) using Verilog HDL.
 
-## Features
+The ALU performs arithmetic and logical operations based on a 3-bit operation selector.
 
-* 32-bit data width
-* Arithmetic operations
+## Operations
 
-  * Addition
-  * Subtraction
-* Logical operations
+| F | Operation |
+|---|-----------|
+| 000 | Addition |
+| 001 | Subtraction |
+| 010 | Multiplication |
+| 011 | Division |
+| 100 | AND |
+| 101 | OR |
+| 110 | NOT A |
+| 111 | NOT (A + B) |
 
-  * AND
-  * OR
-  * XOR
-  * NOT
-* Simulation testbench for verification
+## Project Flow
+
+Specification  
+↓  
+Verilog RTL Design  
+↓  
+Testbench Development  
+↓  
+Simulation using Icarus Verilog  
+↓  
+Waveform Analysis using GTKWave  
+↓  
+RTL Synthesis using Yosys  
+↓  
+Synthesized Logic Diagram using Graphviz
+
+## Files
+
+- `alu.v` — 32-bit ALU RTL design
+- `alutb.v` — Verilog testbench
+- `alu.vcd` — Simulation waveform
+- `alu_synth.dot` — Synthesized circuit Graphviz file
+- `alu_synth.png` — Synthesized circuit diagram
 
 ## Tools Used
 
-* Verilog HDL
-* EDA Playground
-* Icarus Verilog
+- Verilog HDL
+- Icarus Verilog
+- GTKWave
+- Yosys
+- Graphviz
+- Ubuntu / WSL
 
-## Project Files
+## Verification
 
-* `alu32.v` – 32-bit ALU design
-* `alu32_tb.v` – Testbench for simulation
-
-## Applications
-
-* Processor datapaths
-* Digital system design
-* CPU arithmetic and logic operations
-* VLSI and FPGA learning
+The ALU was simulated with different operation-select inputs and the resulting outputs were verified using waveform analysis.
 
 ## Author
 
-**Preethi K N**
-Electronics and Communication Engineering Student
+Preethi K N

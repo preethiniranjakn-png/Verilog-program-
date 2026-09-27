@@ -1,8 +1,8 @@
 module alu(a,b,f,y);
   input[31:0]a,b;
   input[2:0]f;
-  output[7:0]y;
-  reg[7:0]y;
+  output[31:0]y;
+  reg[31:0]y;
   always @ (a,b,f)
     begin
     case(f)
